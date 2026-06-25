@@ -57,6 +57,12 @@ def test_evaluation_helpers_exported():
         assert hasattr(cmor438_ml, name)
 
 
+def test_model_selection_helpers_exported():
+    for name in ("k_fold_split", "cross_validate_classifier"):
+        assert hasattr(cmor438_ml, name)
+        assert callable(getattr(cmor438_ml, name))
+
+
 def test_dataset_loader_exported_and_callable():
     assert hasattr(cmor438_ml, "load_breast_cancer_data")
     X, y, feature_names, target_names = cmor438_ml.load_breast_cancer_data()

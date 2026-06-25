@@ -13,6 +13,10 @@ from cmor438_ml.metrics import (
     precision_score,
     recall_score,
 )
+from cmor438_ml.model_selection import (
+    cross_validate_classifier,
+    k_fold_split,
+)
 from cmor438_ml.preprocessing import (
     StandardScalerScratch,
     add_intercept,
@@ -52,4 +56,7 @@ __all__ = [
     "classification_report_dict",
     "evaluate_classifier",
     "compare_classifiers",
+    # model selection
+    "k_fold_split",
+    "cross_validate_classifier",
 ]
