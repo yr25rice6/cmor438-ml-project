@@ -1,5 +1,6 @@
 """cmor438_ml: reusable machine learning utilities for the CMOR 438 / INDE 577 final project."""
 
+from cmor438_ml.datasets import load_breast_cancer_data
 from cmor438_ml.metrics import (
     accuracy_score,
     confusion_matrix,
@@ -40,4 +41,6 @@ __all__ = [
     "train_test_split",
     "StandardScalerScratch",
     "add_intercept",
+    # datasets
+    "load_breast_cancer_data",
 ]

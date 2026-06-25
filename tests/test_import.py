@@ -48,6 +48,14 @@ def test_preprocessing_helpers_exported():
         assert hasattr(cmor438_ml, name)
 
 
+def test_dataset_loader_exported_and_callable():
+    assert hasattr(cmor438_ml, "load_breast_cancer_data")
+    X, y, feature_names, target_names = cmor438_ml.load_breast_cancer_data()
+    assert X.shape[0] == y.shape[0]
+    assert len(feature_names) == X.shape[1]
+    assert len(target_names) == 2
+
+
 def test_package_level_usage_example():
     assert cmor438_ml.accuracy_score([0, 1], [0, 1]) == 1.0
 
