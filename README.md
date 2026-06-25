@@ -70,6 +70,8 @@ end-to-end workflow and demonstrates:
 - training both the KNN and logistic regression models
 - evaluating each model with the package metrics
 - comparing the two models
+- a five-fold cross-validation check to gauge how sensitive the comparison is to
+  the particular train/test split
 - a brief KNN hyperparameter check (varying the number of neighbors)
 
 ## Installation
@@ -120,7 +122,10 @@ It can also be opened and run interactively in Jupyter (for example with
 
 ## Limitations and Next Steps
 
-- The current notebook relies on a single train/test split.
-- Cross-validation has not yet been added.
-- Future work may include additional models, cross-validation, ROC/AUC analysis,
-  and further notebooks to extend the comparison.
+- The notebook reports both a single train/test split and a simple k-fold
+  cross-validation check (a `cross_validate_classifier` utility has been added to
+  the package for this).
+- The cross-validation check standardizes the feature matrix once up front rather
+  than refitting preprocessing inside each fold.
+- Future work may include stricter per-fold preprocessing pipelines, ROC/AUC
+  analysis, additional models, and further notebooks to extend the comparison.
