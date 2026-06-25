@@ -1,6 +1,11 @@
 """cmor438_ml: reusable machine learning utilities for the CMOR 438 / INDE 577 final project."""
 
 from cmor438_ml.datasets import load_breast_cancer_data
+from cmor438_ml.evaluation import (
+    classification_report_dict,
+    compare_classifiers,
+    evaluate_classifier,
+)
 from cmor438_ml.metrics import (
     accuracy_score,
     confusion_matrix,
@@ -43,4 +48,8 @@ __all__ = [
     "add_intercept",
     # datasets
     "load_breast_cancer_data",
+    # evaluation
+    "classification_report_dict",
+    "evaluate_classifier",
+    "compare_classifiers",
 ]
