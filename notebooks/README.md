@@ -9,5 +9,6 @@ This directory holds the Jupyter notebooks for the project.
   the Breast Cancer Wisconsin dataset: loading the data, a brief exploratory
   analysis, a train/test split, feature standardization, training the KNN and
   logistic regression models, evaluating and comparing the two models, a
-  five-fold cross-validation check on that comparison, and a short KNN
-  hyperparameter check.
+  five-fold cross-validation check on that comparison, a short KNN
+  hyperparameter check, and a ROC/AUC analysis of the logistic regression model
+  (treating benign as the positive class).

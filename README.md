@@ -46,7 +46,7 @@ The `cmor438_ml` package currently provides:
 - **Validation helpers** — input checks such as array/shape validation, fitted
   estimator checks, and binary label verification.
 - **Classification metrics** — accuracy, confusion matrix, precision, recall,
-  and F1 score.
+  F1 score, and ROC/AUC helpers (`roc_curve_binary` and `auc_score`).
 - **Preprocessing utilities** — a train/test split, a from-scratch standard
   scaler (`StandardScalerScratch`), and an intercept helper.
 - **Dataset loader** — `load_breast_cancer_data` for loading the Breast Cancer
@@ -73,6 +73,8 @@ end-to-end workflow and demonstrates:
 - a five-fold cross-validation check to gauge how sensitive the comparison is to
   the particular train/test split
 - a brief KNN hyperparameter check (varying the number of neighbors)
+- a ROC/AUC analysis of the logistic regression model that evaluates its ranking
+  quality across thresholds (treating benign as the positive class)
 
 ## Installation
 
@@ -127,5 +129,8 @@ It can also be opened and run interactively in Jupyter (for example with
   the package for this).
 - The cross-validation check standardizes the feature matrix once up front rather
   than refitting preprocessing inside each fold.
-- Future work may include stricter per-fold preprocessing pipelines, ROC/AUC
-  analysis, additional models, and further notebooks to extend the comparison.
+- ROC/AUC utilities (`roc_curve_binary` and `auc_score`) have been added to the
+  package, and the notebook now includes a ROC/AUC demonstration for the logistic
+  regression model.
+- Future work may include stricter per-fold preprocessing pipelines, additional
+  models, and further notebooks to extend the comparison.
