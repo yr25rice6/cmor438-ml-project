@@ -1,4 +1,4 @@
-﻿.venv/
+.venv/
 venv/
 env/
 __pycache__/
@@ -12,3 +12,11 @@ htmlcov/
 Thumbs.db
 .env
 local_setup_report.txt
+build/
+dist/
+
+# Data files (keep directory placeholders)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
