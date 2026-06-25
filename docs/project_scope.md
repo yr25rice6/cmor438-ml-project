@@ -25,13 +25,11 @@ The project will be assessed against the following weighting:
 
 | Criterion                          | Weight |
 | ---------------------------------- | ------ |
-| Code quality and organization      | 30%    |
-| Correctness of algorithm work      | 25%    |
-| Analysis, evaluation, and results  | 25%    |
-| Documentation and reproducibility  | 20%    |
-
-> Note: these percentages reflect the current planning assumption and will be
-> reconciled against the official course rubric before final submission.
+| Functionality and Implementation   | 40%    |
+| Documentation and Readability      | 20%    |
+| Testing and Reliability            | 20%    |
+| Examples and Usability             | 10%    |
+| Repository Quality                 | 10%    |
 
 ## Current Setup Decision
 

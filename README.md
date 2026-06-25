@@ -2,18 +2,19 @@
 
 ## Project Overview
 
-This repository contains the final project for CMOR 438 / INDE 577. The project
-will explore a range of machine learning algorithms, applying them to a dataset
-and documenting the data exploration, modeling, evaluation, and interpretation
-process. A small custom Python package (`cmor438_ml`) will hold reusable code
-that supports the analysis.
+This is the public repository for the CMOR 438 / INDE 577 final project. The
+project will explore a range of machine learning algorithms, applying them to a
+dataset and documenting the data exploration, modeling, evaluation, and
+interpretation process. A small custom Python package (`cmor438_ml`) will hold
+reusable code that supports the analysis.
 
 ## Current Status
 
 **Initial setup.** The repository currently contains only the project skeleton:
-directory structure, packaging configuration, and a minimal smoke test. The
-machine learning algorithms, notebooks, experiments, and results have not been
-added yet and will be developed in later stages of the project.
+directory structure, packaging configuration, environment setup, and pytest
+smoke tests for the package. The machine learning algorithms, notebooks,
+experiments, and results have not been added yet and will be developed in later
+stages of the project.
 
 ## Planned Repository Structure
 
@@ -36,24 +37,34 @@ added yet and will be developed in later stages of the project.
 
 ## Setup
 
-Create and activate a virtual environment, then install the dependencies:
+Create and activate a virtual environment, then install the dependencies and the
+package in editable mode.
+
+Windows (PowerShell):
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -e .
+```
+
+macOS / Linux:
 
 ```bash
 python -m venv .venv
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
-# macOS / Linux
 source .venv/bin/activate
-
-pip install -r requirements.txt
-pip install -e .
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ## Testing
 
-Run the test suite with:
+Run the smoke tests to confirm the package is installed and importable:
 
-```bash
+```powershell
 python -m pytest
 ```
 
