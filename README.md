@@ -2,40 +2,77 @@
 
 ## Project Overview
 
-This is the public repository for the CMOR 438 / INDE 577 final project. The
-project will explore a range of machine learning algorithms, applying them to a
-dataset and documenting the data exploration, modeling, evaluation, and
-interpretation process. A small custom Python package (`cmor438_ml`) will hold
-reusable code that supports the analysis.
+This repository implements a reproducible binary classification workflow for the
+Breast Cancer Wisconsin (Diagnostic) dataset. The goal is to classify tumors as
+malignant or benign while keeping the analysis clean and repeatable. To support
+the workflow, the project includes a small custom Python package (`cmor438_ml`)
+that provides reusable machine learning utilities and a couple of from-scratch
+models, so the notebook stays focused on the analysis rather than repeating
+boilerplate code.
 
-## Current Status
-
-**Initial setup.** The repository currently contains only the project skeleton:
-directory structure, packaging configuration, environment setup, and pytest
-smoke tests for the package. The machine learning algorithms, notebooks,
-experiments, and results have not been added yet and will be developed in later
-stages of the project.
-
-## Planned Repository Structure
+## Repository Structure
 
 ```
 .
-├── docs/                 # Project scope and supporting documentation
-├── notebooks/            # Jupyter notebooks (exploration, modeling, evaluation)
-├── examples/             # Usage examples for the custom package
-├── data/
-│   ├── raw/              # Original, unmodified data (not tracked)
-│   └── processed/        # Cleaned/derived data (not tracked)
+├── src/
+│   └── cmor438_ml/       # Custom Python package (utilities and helpers)
+│       └── models/       # From-scratch model implementations
+├── tests/                # Test suite for the package
+├── notebooks/            # Jupyter notebook(s) for the analysis
+├── docs/                 # Project scope, planning, and supporting notes
+├── data/                 # Local data directory (raw/processed, not tracked)
 ├── reports/
 │   └── figures/          # Generated figures and plots
-├── src/
-│   └── cmor438_ml/       # Custom Python package
-├── tests/                # Test suite
+├── examples/             # Usage notes for the custom package
 ├── requirements.txt      # Python dependencies
 └── pyproject.toml        # Build and tooling configuration
 ```
 
-## Setup
+- **`src/cmor438_ml/`** — the custom package holding reusable utilities for
+  validation, metrics, preprocessing, dataset loading, and evaluation.
+- **`src/cmor438_ml/models/`** — from-scratch model implementations
+  (`KNNClassifier` and `LogisticRegressionGD`).
+- **`tests/`** — pytest suite covering the package behavior.
+- **`notebooks/`** — the analysis notebook that ties the package together.
+- **`docs/`** — project scope, planning notes, and dataset/algorithm decisions.
+- **`data/`** — local directory for raw and processed data (not tracked in git).
+- **`reports/figures/`** — output directory for generated figures and plots.
+- **`examples/`** — short usage notes for the custom package.
+
+## Implemented Package Components
+
+The `cmor438_ml` package currently provides:
+
+- **Validation helpers** — input checks such as array/shape validation, fitted
+  estimator checks, and binary label verification.
+- **Classification metrics** — accuracy, confusion matrix, precision, recall,
+  and F1 score.
+- **Preprocessing utilities** — a train/test split, a from-scratch standard
+  scaler (`StandardScalerScratch`), and an intercept helper.
+- **Dataset loader** — `load_breast_cancer_data` for loading the Breast Cancer
+  Wisconsin dataset.
+- **Evaluation utilities** — functions to evaluate a classifier, build a
+  classification report, and compare classifiers.
+- **`KNNClassifier`** — a from-scratch k-nearest-neighbors classifier.
+- **`LogisticRegressionGD`** — a from-scratch logistic regression model trained
+  with gradient descent.
+
+## Notebook
+
+The main analysis lives in
+`notebooks/01_breast_cancer_classification_workflow.ipynb`. It walks through the
+end-to-end workflow and demonstrates:
+
+- loading the Breast Cancer Wisconsin dataset
+- a brief exploratory analysis of the data
+- a train/test split
+- standardization of the features
+- training both the KNN and logistic regression models
+- evaluating each model with the package metrics
+- comparing the two models
+- a brief KNN hyperparameter check (varying the number of neighbors)
+
+## Installation
 
 Create and activate a virtual environment, then install the dependencies and the
 package in editable mode.
@@ -44,33 +81,46 @@ Windows (PowerShell):
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install -e .
+pip install -r requirements.txt
+pip install -e .
 ```
 
-macOS / Linux:
+## Running Tests
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install -e .
-```
-
-## Testing
-
-Run the smoke tests to confirm the package is installed and importable:
+Run the test suite with:
 
 ```powershell
-python -m pytest
+.\.venv\Scripts\python.exe -m pytest
 ```
 
-## Course Alignment
+The current suite includes tests for validation, metrics, preprocessing,
+datasets, evaluation, KNN, logistic regression, and package imports.
 
-This project is the final deliverable for CMOR 438 / INDE 577. It is intended to
-demonstrate understanding of the machine learning algorithms covered in the
-course through a complete, reproducible analysis. See `docs/project_scope.md`
-for the detailed scope and deliverables.
+## Running the Notebook
+
+The notebook can be executed from the command line:
+
+```powershell
+.\.venv\Scripts\python.exe -m jupyter nbconvert --to notebook --execute --inplace notebooks/01_breast_cancer_classification_workflow.ipynb
+```
+
+It can also be opened and run interactively in Jupyter (for example with
+`jupyter notebook` or `jupyter lab`).
+
+## Reproducibility Notes
+
+- Fixed random states are used where appropriate (for example in the train/test
+  split) so that results are repeatable.
+- The dataset is bundled with scikit-learn, so no manual download is required.
+- Reusable package functions reduce duplicated code in the notebook and keep the
+  analysis consistent.
+- Tests are included for the core package behavior to help catch regressions.
+
+## Limitations and Next Steps
+
+- The current notebook relies on a single train/test split.
+- Cross-validation has not yet been added.
+- Future work may include additional models, cross-validation, ROC/AUC analysis,
+  and further notebooks to extend the comparison.

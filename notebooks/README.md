@@ -1,12 +1,12 @@
 # Notebooks
 
-This directory will hold the Jupyter notebooks for the project. No notebooks
-have been added yet.
+This directory holds the Jupyter notebooks for the project.
 
-Once the analysis begins, the notebooks are planned to cover:
+## Available notebooks
 
-- **Data exploration** — understanding the dataset, distributions, and structure.
-- **Preprocessing** — cleaning, feature engineering, and preparing data for modeling.
-- **Modeling** — training the machine learning algorithms.
-- **Evaluation** — measuring and comparing model performance.
-- **Interpretation** — explaining results and drawing conclusions.
+- **`01_breast_cancer_classification_workflow.ipynb`** — the main analysis
+  notebook. It demonstrates the end-to-end binary classification workflow for
+  the Breast Cancer Wisconsin dataset: loading the data, a brief exploratory
+  analysis, a train/test split, feature standardization, training the KNN and
+  logistic regression models, evaluating and comparing the two models, and a
+  short KNN hyperparameter check.
