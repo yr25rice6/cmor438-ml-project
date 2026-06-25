@@ -23,7 +23,7 @@ boilerplate code.
 ├── data/                 # Local data directory (raw/processed, not tracked)
 ├── reports/
 │   └── figures/          # Generated figures and plots
-├── examples/             # Usage notes for the custom package
+├── examples/             # Standalone usage examples for the custom package
 ├── requirements.txt      # Python dependencies
 └── pyproject.toml        # Build and tooling configuration
 ```
@@ -37,7 +37,7 @@ boilerplate code.
 - **`docs/`** — project scope, planning notes, and dataset/algorithm decisions.
 - **`data/`** — local directory for raw and processed data (not tracked in git).
 - **`reports/figures/`** — output directory for generated figures and plots.
-- **`examples/`** — short usage notes for the custom package.
+- **`examples/`** — standalone usage examples for the custom package.
 
 ## Implemented Package Components
 
@@ -75,6 +75,23 @@ end-to-end workflow and demonstrates:
 - a brief KNN hyperparameter check (varying the number of neighbors)
 - a ROC/AUC analysis of the logistic regression model that evaluates its ranking
   quality across thresholds (treating benign as the positive class)
+
+## Examples
+
+The `examples/` directory holds standalone scripts that use the `cmor438_ml`
+package outside of the notebook. The main one is
+`examples/basic_classification_demo.py`, a lightweight command-line example that
+loads the dataset, standardizes the features, trains both models, and prints a
+short summary of their test-set metrics (including a ROC/AUC summary for the
+logistic regression model). It produces no plots and writes no files.
+
+Run it from the repository root:
+
+```powershell
+.\.venv\Scripts\python.exe examples/basic_classification_demo.py
+```
+
+See `examples/README.md` for more detail.
 
 ## Installation
 
