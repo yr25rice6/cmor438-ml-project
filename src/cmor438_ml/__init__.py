@@ -8,10 +8,12 @@ from cmor438_ml.evaluation import (
 )
 from cmor438_ml.metrics import (
     accuracy_score,
+    auc_score,
     confusion_matrix,
     f1_score,
     precision_score,
     recall_score,
+    roc_curve_binary,
 )
 from cmor438_ml.model_selection import (
     cross_validate_classifier,
@@ -46,6 +48,8 @@ __all__ = [
     "precision_score",
     "recall_score",
     "f1_score",
+    "roc_curve_binary",
+    "auc_score",
     # preprocessing
     "train_test_split",
     "StandardScalerScratch",

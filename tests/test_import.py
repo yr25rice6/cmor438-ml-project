@@ -39,8 +39,15 @@ def test_metric_helpers_exported():
         "precision_score",
         "recall_score",
         "f1_score",
+        "roc_curve_binary",
+        "auc_score",
     ):
         assert hasattr(cmor438_ml, name)
+
+
+def test_roc_auc_helpers_exported_and_callable():
+    assert callable(cmor438_ml.roc_curve_binary)
+    assert callable(cmor438_ml.auc_score)
 
 
 def test_preprocessing_helpers_exported():
