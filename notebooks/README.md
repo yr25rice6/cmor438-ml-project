@@ -26,8 +26,8 @@ The per-algorithm material is organized into two directories:
 
 ## Dedicated algorithm notebooks
 
-All eight supervised notebooks are available now. The unsupervised directory
-still holds a placeholder for the notebook that will be added in a later step.
+All eight supervised notebooks and the K Means clustering notebook are now
+available.
 
 ### Supervised
 
@@ -42,4 +42,4 @@ still holds a placeholder for the notebook that will be added in a later step.
 
 ### Unsupervised
 
-- **K Means Clustering** — `Unsupervised/K Means Clustering/`
+- **K Means Clustering** *(available)* — `Unsupervised/K Means Clustering/k_means_clustering.ipynb`
