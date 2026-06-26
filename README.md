@@ -18,7 +18,9 @@ boilerplate code.
 │   └── cmor438_ml/       # Custom Python package (utilities and helpers)
 │       └── models/       # From-scratch model implementations
 ├── tests/                # Test suite for the package
-├── notebooks/            # Jupyter notebook(s) for the analysis
+├── notebooks/            # Jupyter notebooks (main workflow + per-algorithm)
+│   ├── Supervised/       # Dedicated supervised-algorithm notebooks
+│   └── Unsupervised/     # Dedicated unsupervised-algorithm notebooks
 ├── docs/                 # Project scope, planning, and supporting notes
 ├── data/                 # Local data directory (raw/processed, not tracked)
 ├── reports/
@@ -33,7 +35,8 @@ boilerplate code.
 - **`src/cmor438_ml/models/`** — from-scratch model implementations
   (`KNNClassifier` and `LogisticRegressionGD`).
 - **`tests/`** — pytest suite covering the package behavior.
-- **`notebooks/`** — the analysis notebook that ties the package together.
+- **`notebooks/`** — the main analysis notebook plus dedicated per-algorithm
+  notebooks organized into `Supervised/` and `Unsupervised/` directories.
 - **`docs/`** — project scope, planning notes, and dataset/algorithm decisions.
 - **`data/`** — local directory for raw and processed data (not tracked in git).
 - **`reports/figures/`** — output directory for generated figures and plots.
@@ -75,6 +78,12 @@ end-to-end workflow and demonstrates:
 - a brief KNN hyperparameter check (varying the number of neighbors)
 - a ROC/AUC analysis of the logistic regression model that evaluates its ranking
   quality across thresholds (treating benign as the positive class)
+
+The `notebooks/` directory is also organized into `Supervised/` and
+`Unsupervised/` subdirectories that hold dedicated per-algorithm notebooks
+following the structure of the course example repositories. These directories
+currently contain placeholders; the individual algorithm notebooks will be
+added in a later step. See `notebooks/README.md` for the full index.
 
 ## Examples
 
