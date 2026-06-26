@@ -24,22 +24,22 @@ The per-algorithm material is organized into two directories:
 - **`Unsupervised/`** — dedicated notebooks for the unsupervised learning
   algorithms (see `Unsupervised/README.md`).
 
-## Planned dedicated algorithm notebooks
+## Dedicated algorithm notebooks
 
-The following dedicated notebooks are planned. The directories exist now as
-placeholders (each holds a `.gitkeep` file); the notebooks themselves will be
-added in a later step.
+The first three supervised notebooks are available now. The remaining
+directories exist as placeholders (each holds a `.gitkeep` file); those
+notebooks will be added in a later step.
 
 ### Supervised
 
-1. **Perceptron** — `Supervised/1. Perceptron/`
-2. **Gradient Descent** — `Supervised/2. Gradient Descent/`
-3. **Linear Regression** — `Supervised/3. Linear Regression/`
-4. **Logistic Regression** — `Supervised/4. Logistic Regression/`
-5. **Multilayer Perceptron** — `Supervised/5. Multilayer Perceptron/`
-6. **K Nearest Neighbors** — `Supervised/6. K Nearest Neighbors/`
-7. **Decision Tree** — `Supervised/7. Decision Tree/`
-8. **Random Forest** — `Supervised/8. Random Forest/`
+1. **Perceptron** *(available)* — `Supervised/1. Perceptron/perceptron.ipynb`
+2. **Gradient Descent** *(available)* — `Supervised/2. Gradient Descent/gradient_descent.ipynb`
+3. **Linear Regression** *(available)* — `Supervised/3. Linear Regression/linear_regression.ipynb`
+4. **Logistic Regression** *(planned)* — `Supervised/4. Logistic Regression/`
+5. **Multilayer Perceptron** *(planned)* — `Supervised/5. Multilayer Perceptron/`
+6. **K Nearest Neighbors** *(planned)* — `Supervised/6. K Nearest Neighbors/`
+7. **Decision Tree** *(planned)* — `Supervised/7. Decision Tree/`
+8. **Random Forest** *(planned)* — `Supervised/8. Random Forest/`
 
 ### Unsupervised
 
