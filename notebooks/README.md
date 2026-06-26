@@ -26,7 +26,7 @@ The per-algorithm material is organized into two directories:
 
 ## Dedicated algorithm notebooks
 
-The first three supervised notebooks are available now. The remaining
+The first six supervised notebooks are available now. The remaining
 directories exist as placeholders (each holds a `.gitkeep` file); those
 notebooks will be added in a later step.
 
@@ -35,9 +35,9 @@ notebooks will be added in a later step.
 1. **Perceptron** *(available)* — `Supervised/1. Perceptron/perceptron.ipynb`
 2. **Gradient Descent** *(available)* — `Supervised/2. Gradient Descent/gradient_descent.ipynb`
 3. **Linear Regression** *(available)* — `Supervised/3. Linear Regression/linear_regression.ipynb`
-4. **Logistic Regression** *(planned)* — `Supervised/4. Logistic Regression/`
-5. **Multilayer Perceptron** *(planned)* — `Supervised/5. Multilayer Perceptron/`
-6. **K Nearest Neighbors** *(planned)* — `Supervised/6. K Nearest Neighbors/`
+4. **Logistic Regression** *(available)* — `Supervised/4. Logistic Regression/logistic_regression.ipynb`
+5. **Multilayer Perceptron** *(available)* — `Supervised/5. Multilayer Perceptron/multilayer_perceptron.ipynb`
+6. **K Nearest Neighbors** *(available)* — `Supervised/6. K Nearest Neighbors/k_nearest_neighbors.ipynb`
 7. **Decision Tree** *(planned)* — `Supervised/7. Decision Tree/`
 8. **Random Forest** *(planned)* — `Supervised/8. Random Forest/`
 
