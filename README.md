@@ -81,12 +81,12 @@ end-to-end workflow and demonstrates:
 
 The `notebooks/` directory is also organized into `Supervised/` and
 `Unsupervised/` subdirectories that hold dedicated per-algorithm notebooks
-following the structure of the course example repositories. The repository now
-includes dedicated notebooks for **Perceptron**, **Gradient Descent**, and
-**Linear Regression**, along with **Logistic Regression**, **Multilayer
-Perceptron**, and **K Nearest Neighbors**; the remaining algorithm directories
-are placeholders that will be filled in a later step. See `notebooks/README.md`
-for the full index.
+following the structure of the course example repositories. All eight supervised
+algorithm notebooks are now available — **Perceptron**, **Gradient Descent**,
+**Linear Regression**, **Logistic Regression**, **Multilayer Perceptron**, **K
+Nearest Neighbors**, **Decision Tree**, and **Random Forest**; the unsupervised
+directory still holds a placeholder that will be filled in a later step. See
+`notebooks/README.md` for the full index.
 
 ## Examples
 
